@@ -12,7 +12,7 @@ int n,m,i,j;
 
 int get_best(map<int,int> &candidate,int v)
 {
-    auto it=candidate.lower_bound(v);
+    auto it=candidate.lower_bound(v);  // lower->Strictly Increasing && Upper of Increasing means equality holds
     if(it==candidate.begin())return 0;
     it--; // Giving the best greatest among all candidate
     return it->second;
